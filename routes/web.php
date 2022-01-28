@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ThreadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,6 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('/threads', function () {
-    return view('threads.index');
-})->name('threads');
+Route::get('/threads', [ThreadController::class, 'index'])->name('threads');
+Route::get('/threads/create', [ThreadController::class, 'create'])->name('threads.create');
+Route::post('/threads/create', [ThreadController::class, 'store']);
