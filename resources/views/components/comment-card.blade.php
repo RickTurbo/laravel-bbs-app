@@ -5,4 +5,10 @@
     <span class="text-sm text-gray-600">{{ $comment->created_at->toDateTimeString() }}</span>
 
     <p>{{ $comment->body }}</p>
+
+    <form action="{{ route('comments.destroy', $comment) }}" method="post" class="mt-2">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="text-blue-500">{{ __('Delete') }}</button>
+    </form>
 </div>
