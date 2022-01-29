@@ -6,9 +6,11 @@
 
     <p>{{ $comment->body }}</p>
 
+    @can('delete', $comment)
     <form action="{{ route('comments.destroy', $comment) }}" method="post" class="mt-2">
         @csrf
         @method('DELETE')
         <button type="submit" class="text-blue-500">{{ __('Delete') }}</button>
     </form>
+    @endcan
 </div>
