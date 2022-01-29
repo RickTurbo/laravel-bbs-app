@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ThreadController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,4 @@ Route::get('/threads', [ThreadController::class, 'index'])->name('threads');
 Route::get('/threads/create', [ThreadController::class, 'create'])->name('threads.create');
 Route::post('/threads/create', [ThreadController::class, 'store']);
 Route::get('/threads/{thread}', [ThreadController::class, 'show'])->name('threads.show');
+Route::post('/threads/{thread}/comments', [CommentController::class, 'store'])->name('comments.store');

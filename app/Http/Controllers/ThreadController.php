@@ -12,7 +12,11 @@ class ThreadController extends Controller
 {
     public function index()
     {
-        return view('threads.index');
+        $threads = Thread::latest()->paginate(20);
+
+        return view('threads.index', [
+            'threads' => $threads
+        ]);
     }
 
     public function create()
