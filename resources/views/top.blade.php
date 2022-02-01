@@ -82,7 +82,7 @@
             </button>
 
             <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
-              <button class="
+              <a href="{{ route('login') }}" class="              
           items-center
           block
           px-4
@@ -101,8 +101,8 @@
           focus:ring-2
           focus:ring-offset-2
           focus:ring-gray-500
-        "> Sign in </button>
-              <button class="
+        "> Log in </a>
+              <a href="{{ route('register') }}" class="
           items-center
           block
           px-4
@@ -121,7 +121,7 @@
           focus:ring-2
           focus:ring-offset-2
           focus:ring-blue-500
-        "> Sign up </button>
+        ">Register</a>
             </div>
         </nav>
       </div>
@@ -130,8 +130,6 @@
 
     <section class="flex flex-col items-center">
       <div class="max-w-xl flex flex-col items-center text-center pt-8 lg:pt-32 pb-16 lg:pb-48">
-        <p class="text-indigo-500 md:text-lg xl:text-xl font-semibold mb-4 md:mb-6">Very proud to introduce</p>
-
         <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">掲示板アプリを作成しました</h1>
 
         <div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
@@ -139,9 +137,6 @@
             class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Start
             now</a>
 
-          <a href="#"
-            class="inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Take
-            tour</a>
         </div>
       </div>
 
